@@ -1,0 +1,47 @@
+# Dependencies – kesinlikle gitmesin
+node_modules/
+**/node_modules/
+
+# Build / output
+.next/
+out/
+dist/
+build/
+*.tsbuildinfo
+
+# Environment – gizli bilgiler (asla commit etme)
+.env
+.env.*
+.env.local
+**/.env
+**/.env.local
+server/.env
+client/.env.local
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE / Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Debug
+*.cpuprofile
+*.heapsnapshot
+.coverage
+coverage/
+
+# Misc
+*.pem
+.vercel
+.turbo

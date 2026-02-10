@@ -1,0 +1,66 @@
+{
+  "nav": {
+    "home": "Start",
+    "menu": "Menu",
+    "standorte": "Standorte",
+    "kontakt": "Kontakt",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen"
+  },
+  "hero": {
+    "tagline": "Nalin – Keep up",
+    "qualitySlogan": "Qualität ist kein Zufall.",
+    "title": "Nalin – Keep up",
+    "subtitle": "Wilheminenstraße 69, 1160 Wien",
+    "cta": "Menu Ansehen"
+  },
+  "home": {
+    "beliebt": "Beliebt",
+    "viewFullMenu": "Alle Speisekarte",
+    "testimonials": "Kundenstimmen",
+    "categories": "Kategorien",
+    "viewMenuLabel": "Menü ansehen"
+  },
+  "menu": {
+    "title": "Unser Menu",
+    "subtitle": "Frische Zutaten, traditionelle Rezepte.",
+    "allergens": "Allergene"
+  },
+  "location": {
+    "title": "Standort",
+    "subtitle": "Besuchen Sie uns in 1160 Wien.",
+    "showOnMap": "Auf Karte anzeigen"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Schreiben Sie uns – wir melden uns bei Ihnen.",
+    "name": "Name",
+    "email": "E-Mail",
+    "subject": "Betreff",
+    "message": "Nachricht",
+    "namePlaceholder": "Ihr Name",
+    "emailPlaceholder": "ihre@email.at",
+    "subjectPlaceholder": "Betreff",
+    "messagePlaceholder": "Ihre Nachricht...",
+    "send": "Senden",
+    "sending": "Wird gesendet...",
+    "success": "Vielen Dank. Ihre Nachricht wurde gesendet.",
+    "errorRequired": "Bitte Name, E-Mail und Nachricht ausfüllen.",
+    "errorCaptcha": "Bitte bestätigen Sie das Captcha.",
+    "errorSend": "Nachricht konnte nicht gesendet werden.",
+    "errorNetwork": "Verbindungsfehler. Bitte später erneut versuchen."
+  },
+  "footer": {
+    "tagline": "Nalin – Keep up",
+    "address": "Adresse",
+    "hours": "Öffnungszeiten",
+    "contact": "Kontakt",
+    "rights": "Alle Rechte vorbehalten.",
+    "impressum": "Impressum"
+  },
+  "impressum": {
+    "title": "Impressum",
+    "back": "Zurück",
+    "intro": "Angaben gemäß § 5 TMG (Informationspflicht für kommerzielle Anbieter). Bitte ergänzen Sie diese Seite mit den rechtlich erforderlichen Angaben zu Ihrem Unternehmen (Firmenname, Anschrift, Vertretungsberechtigte, Kontakt, ggf. Registergericht, USt-IdNr., etc.)."
+  }
+}

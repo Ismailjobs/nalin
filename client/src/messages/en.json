@@ -1,0 +1,66 @@
+{
+  "nav": {
+    "home": "Home",
+    "menu": "Menu",
+    "standorte": "Locations",
+    "kontakt": "Contact",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "hero": {
+    "tagline": "Nalin – Keep up",
+    "qualitySlogan": "Quality is no coincidence.",
+    "title": "Nalin – Keep up",
+    "subtitle": "Wilheminenstraße 69, 1160 Wien",
+    "cta": "View Menu"
+  },
+  "home": {
+    "beliebt": "Popular",
+    "viewFullMenu": "Full Menu",
+    "testimonials": "What Our Guests Say",
+    "categories": "Categories",
+    "viewMenuLabel": "View menu"
+  },
+  "menu": {
+    "title": "Our Menu",
+    "subtitle": "Fresh ingredients, traditional recipes.",
+    "allergens": "Allergens"
+  },
+  "location": {
+    "title": "Location",
+    "subtitle": "Visit us in 1160 Vienna.",
+    "showOnMap": "Show on map"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Get in touch – we'll get back to you.",
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "your@email.com",
+    "subjectPlaceholder": "Subject",
+    "messagePlaceholder": "Your message...",
+    "send": "Send",
+    "sending": "Sending...",
+    "success": "Thank you. Your message has been sent.",
+    "errorRequired": "Please fill in name, email and message.",
+    "errorCaptcha": "Please complete the captcha.",
+    "errorSend": "Message could not be sent.",
+    "errorNetwork": "Connection error. Please try again later."
+  },
+  "footer": {
+    "tagline": "Nalin – Keep up",
+    "address": "Address",
+    "hours": "Opening hours",
+    "contact": "Contact",
+    "rights": "All rights reserved.",
+    "impressum": "Imprint"
+  },
+  "impressum": {
+    "title": "Imprint",
+    "back": "Back",
+    "intro": "Information according to § 5 TMG (duty to provide information for commercial providers). Please add the legally required details about your company (company name, address, representatives, contact, register court if applicable, VAT ID, etc.)."
+  }
+}

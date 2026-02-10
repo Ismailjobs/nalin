@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cream: #FAF9F6;
+  --cream-bright: #FDFDFD;
+  --orange: #E65100;
+  --orange-light: #FF6D00;
+  --charcoal: #1A1A1A;
+  --charcoal-muted: #4A4A4A;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Lato', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--cream-bright);
+  color: var(--charcoal);
+  -webkit-font-smoothing: antialiased;
+}
+
+input,
+button,
+textarea,
+[data-sharp] {
+  border-radius: 0;
+}
+
+/* Sharp divider: orange line */
+.divider-orange {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--orange), transparent);
+  opacity: 0.7;
+}
+
+.divider-gold {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--orange), transparent);
+  opacity: 0.7;
+}
