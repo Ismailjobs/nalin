@@ -22,9 +22,16 @@
     "viewMenuLabel": "Menü ansehen"
   },
   "menu": {
-    "title": "Unser Menu",
+    "title": "Unser Menü",
     "subtitle": "Frische Zutaten, traditionelle Rezepte.",
-    "allergens": "Allergene"
+    "allergens": "Allergene",
+    "backToMenu": "Zurück zum Menü",
+    "categoryDoner": "Döner",
+    "categoryVegetarisch": "Vegetarisch",
+    "categoryBurger": "Hausgemachte Burger",
+    "categoryBeilagen": "Beilagen",
+    "categoryToppings": "Toppings",
+    "categoryGetranke": "Getränke"
   },
   "location": {
     "title": "Standort",
@@ -54,6 +61,8 @@
     "tagline": "Nalin – Keep up",
     "address": "Adresse",
     "hours": "Öffnungszeiten",
+    "hoursLine1": "Montag - Freitag 10:30 - 22:00",
+    "hoursLine2": "Samstag, Sonntag und Feiertage 12:00 - 22:00",
     "contact": "Kontakt",
     "rights": "Alle Rechte vorbehalten.",
     "impressum": "Impressum"
@@ -62,5 +71,15 @@
     "title": "Impressum",
     "back": "Zurück",
     "intro": "Angaben gemäß § 5 TMG (Informationspflicht für kommerzielle Anbieter). Bitte ergänzen Sie diese Seite mit den rechtlich erforderlichen Angaben zu Ihrem Unternehmen (Firmenname, Anschrift, Vertretungsberechtigte, Kontakt, ggf. Registergericht, USt-IdNr., etc.)."
-  }
+  },
+  "testimonials": [
+    { "id": "alexandra", "quote": "Super Kebab! Cocktailsauce schmeckt fantastisch, gutes Brot, nette Mitarbeiter, was will man mehr! Sehr gutes Preis/Leistungsverhältnis.", "author": "Alexandra Rinner" },
+    { "id": "lena", "quote": "Sehr gutes Essen und mega freundlicher service! Leckere vegane Optionen!", "author": "Lena Brandl" },
+    { "id": "christian", "quote": "Sehr gute Wahl für Döner, aber auch die Pizza ist sehr lecker. Freundliches kompetentes Personal. Gute Preise.", "author": "Christian Schaefer" }
+  ],
+  "awards": [
+    { "id": "guru-2021", "name": "Restaurant Guru Empfohlen", "year": "2021" },
+    { "id": "guru-2022", "name": "Restaurant Guru Empfohlen", "year": "2022" },
+    { "id": "tripadvisor-2022", "name": "Tripadvisor Travelers' Choice", "year": "2022" }
+  ]
 }

@@ -28,7 +28,7 @@ export default async function HomePage({
   return (
     <>
       <Hero dict={dict} locale={locale as Locale} />
-      <AwardsSection />
+      <AwardsSection dict={dict} />
       <FeaturedProducts dict={dict} locale={locale} />
       <Testimonials dict={dict} />
     </>

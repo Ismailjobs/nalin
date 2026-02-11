@@ -5,53 +5,15 @@ export interface FeaturedProduct {
   image: string;
 }
 
+/** Anasayfada "Beliebt" bölümünde gösterilecek ürünler. */
 export const featuredProducts: FeaturedProduct[] = [
-  {
-    id: 'doner-tasche',
-    name: 'Döner Tasche',
-    description: 'Hühner oder Kalbfleisch, Salat nach Wahl und Sauce',
-    image: '/doner-tashce.jpg',
-  },
-  {
-    id: 'doner-box',
-    name: 'Döner Box',
-    description: 'Hühner oder Kalbfleisch, Reis oder Pommes, Salat nach Wahl und Sauce',
-    image: '/döner_box.jpg',
-  },
-  {
-    id: 'kebab-durum',
-    name: 'Kebab Dürüm',
-    description: 'Hühner oder Kalbfleisch, Salat nach Wahl und Sauce',
-    image: '/durum_kebab-1.jpg',
-  },
-  {
-    id: 'turkische-pizza',
-    name: 'Türkische Pizza',
-    description: 'mit Salat nach Wahl und Sauce',
-    image: '/türkische_pizza.jpg',
-  },
-  {
-    id: 'falafel-wrap',
-    name: 'Falafel Wrap',
-    description: 'Salat nach Wahl, Falafel, Hummus und Sauce',
-    image: '/falafel_wrap.jpg',
-  },
-  {
-    id: 'falafel-teller',
-    name: 'Falafel Teller',
-    description: 'Reis o. Pommes, Melanzani, Zucchini, Tomaten, Zwiebel und Paprika',
-    image: '/falafel_teller.jpg',
-  },
-  {
-    id: 'doner-teller',
-    name: 'Döner Teller',
-    description: 'Hühner oder Kalbfleisch, Reis oder Pommes, Salat nach Wahl und Sauce',
-    image: '/döner_teller.jpg',
-  },
-  {
-    id: 'hot-dog',
-    name: 'Hot Dog',
-    description: 'Cheddar',
-    image: '/hot_dog.jpg',
-  },
+  { id: 'doner-tasche', name: 'Döner Tasche', description: 'Hähnchen/Steak, Salat nach Wahl und Sauce', image: '/Döner Tasche Neu.jpeg' },
+  { id: 'durum', name: 'Dürüm', description: 'Hähnchen/Steak, Salat nach Wahl und Sauce', image: '/Dürüm - Steak.jpeg' },
+  { id: 'doner-bowl', name: 'Döner Bowl', description: 'Hähnchen/Steak, Reis oder Pommes, Salat nach Wahl und Sauce', image: '/Döner Bowl Neu.jpeg' },
+  { id: 'nalin-mix', name: 'Nalin Mix', description: 'Hähnchen/Steak, Pommes und Cocktailsauce', image: '/Nalin Mix.jpeg' },
+  { id: 'turkische-pizza', name: 'Türkische Pizza', description: 'mit Salat nach Wahl und Sauce', image: '/Türkische Pizza.jpeg' },
+  { id: 'falafel-tasche', name: 'Falafel Tasche', description: 'Hummus, Salat nach Wahl und Sauce', image: '/Falafel.jpeg' },
+  { id: 'falafel-durum', name: 'Falafel Dürüm', description: 'Hummus, Salat nach Wahl und Sauce', image: '/Falafel Dürüm.jpeg' },
+  { id: 'salatbowl', name: 'Salatbowl', description: 'Grüner Salat, Rotkraut, Weißkraut, Zwiebeln, Tomaten, Gurken und Sauce', image: '/Salat Bowl.jpeg' },
+  { id: 'classico-burger', name: 'Classico Burger', description: 'Rinderhackfleisch, Grüner Salat, Tomaten, Zwiebeln und Cocktailsauce', image: '/Burger.jpeg' },
 ];

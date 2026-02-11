@@ -47,8 +47,7 @@ export default async function ImpressumPage({
             Österreich
           </p>
           <p>
-            Telefon: +43 1 481 88 21<br />
-            E-Mail: info@nalin.at
+            E-Mail: office@nalin.at
           </p>
         </div>
       </div>

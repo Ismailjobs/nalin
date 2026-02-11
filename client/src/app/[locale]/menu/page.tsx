@@ -23,5 +23,5 @@ export default async function MenuPage({
   const { locale } = await params;
   if (!isValidLocale(locale)) notFound();
   const dict = getDictionary(locale as Locale);
-  return <MenuPageClient dict={dict} />;
+  return <MenuPageClient dict={dict} locale={locale} />;
 }

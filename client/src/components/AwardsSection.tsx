@@ -2,27 +2,13 @@
 
 import { motion } from 'framer-motion';
 import { Award, Trophy } from 'lucide-react';
+import type { Dictionary } from '@/i18n/get-dictionary';
 
-const awards = [
-  {
-    id: 'guru-2021',
-    name: 'Restaurant Guru Recommended',
-    year: '2021',
-    icon: Award,
-  },
-  {
-    id: 'guru-2022',
-    name: 'Restaurant Guru Recommended',
-    year: '2022',
-    icon: Award,
-  },
-  {
-    id: 'tripadvisor-2022',
-    name: "Tripadvisor Travelers' Choice",
-    year: '2022',
-    icon: Trophy,
-  },
-];
+const awardIcons: Record<string, typeof Award> = {
+  'guru-2021': Award,
+  'guru-2022': Award,
+  'tripadvisor-2022': Trophy,
+};
 
 function LaurelCircle({ year }: { year: string }) {
   return (
@@ -63,12 +49,13 @@ function LaurelCircle({ year }: { year: string }) {
   );
 }
 
-export function AwardsSection() {
+export function AwardsSection({ dict }: { dict: Dictionary }) {
+  const awards = dict.awards ?? [];
   return (
     <section className="w-full border-y border-charcoal/10 bg-cream-bright py-10 md:py-12">
       <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-center gap-x-4 gap-y-10 px-6 md:gap-x-12 md:gap-y-0">
         {awards.map((award, index) => {
-          const Icon = award.icon;
+          const Icon = awardIcons[award.id] ?? Award;
           return (
             <motion.div
               key={award.id}

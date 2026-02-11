@@ -4,7 +4,7 @@ import { transporter, isEmailConfigured } from '../lib/email.js';
 
 const router = Router();
 
-const RECIPIENT = process.env.CONTACT_EMAIL || 'info@nalin.at';
+const RECIPIENT = process.env.CONTACT_EMAIL || 'office@nalin.at';
 
 export interface ContactBody {
   name: string;

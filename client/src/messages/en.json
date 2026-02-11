@@ -24,7 +24,14 @@
   "menu": {
     "title": "Our Menu",
     "subtitle": "Fresh ingredients, traditional recipes.",
-    "allergens": "Allergens"
+    "allergens": "Allergens",
+    "backToMenu": "Back to menu",
+    "categoryDoner": "Döner",
+    "categoryVegetarisch": "Vegetarian",
+    "categoryBurger": "Burgers",
+    "categoryBeilagen": "Sides",
+    "categoryToppings": "Toppings",
+    "categoryGetranke": "Drinks"
   },
   "location": {
     "title": "Location",
@@ -54,6 +61,8 @@
     "tagline": "Nalin – Keep up",
     "address": "Address",
     "hours": "Opening hours",
+    "hoursLine1": "Monday - Friday 10:30 - 22:00",
+    "hoursLine2": "Saturday, Sunday and holidays 12:00 - 22:00",
     "contact": "Contact",
     "rights": "All rights reserved.",
     "impressum": "Imprint"
@@ -62,5 +71,15 @@
     "title": "Imprint",
     "back": "Back",
     "intro": "Information according to § 5 TMG (duty to provide information for commercial providers). Please add the legally required details about your company (company name, address, representatives, contact, register court if applicable, VAT ID, etc.)."
-  }
+  },
+  "testimonials": [
+    { "id": "alexandra", "quote": "Great kebab! The cocktail sauce tastes fantastic, good bread, friendly staff – what more could you want! Great value for money.", "author": "Alexandra Rinner" },
+    { "id": "lena", "quote": "Really good food and super friendly service! Tasty vegan options!", "author": "Lena Brandl" },
+    { "id": "christian", "quote": "Great choice for döner, and the pizza is delicious too. Friendly, competent staff. Good prices.", "author": "Christian Schaefer" }
+  ],
+  "awards": [
+    { "id": "guru-2021", "name": "Restaurant Guru Recommended", "year": "2021" },
+    { "id": "guru-2022", "name": "Restaurant Guru Recommended", "year": "2022" },
+    { "id": "tripadvisor-2022", "name": "Tripadvisor Travelers' Choice", "year": "2022" }
+  ]
 }

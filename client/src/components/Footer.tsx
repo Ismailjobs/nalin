@@ -1,14 +1,12 @@
 'use client';
 
 import Link from 'next/link';
-import { MapPin, Clock, Phone, Mail, Facebook, Instagram } from 'lucide-react';
+import { MapPin, Clock, Mail, Facebook, Instagram } from 'lucide-react';
 import type { Locale } from '@/i18n/config';
 import type { Dictionary } from '@/i18n/get-dictionary';
 
 const address = 'Wilheminenstraße 69, 1160 Wien';
-const hours = ['Mon–Fri: 10:30–22:00', 'Sat–Sun: 12:00–22:00'];
-const phone = '+43 1 481 88 21';
-const email = 'info@nalin.at';
+const email = 'office@nalin.at';
 const social = [
   { name: 'Facebook', href: 'https://www.facebook.com', icon: Facebook },
   { name: 'Instagram', href: 'https://www.instagram.com', icon: Instagram },
@@ -46,9 +44,8 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
             <div className="mt-3 flex items-start gap-2 font-sans text-sm text-charcoal-muted">
               <Clock size={18} className="mt-0.5 shrink-0" />
               <div>
-                {hours.map((line) => (
-                  <div key={line}>{line}</div>
-                ))}
+                <div>{t.hoursLine1}</div>
+                <div>{t.hoursLine2}</div>
               </div>
             </div>
           </div>
@@ -57,10 +54,6 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
               {t.contact}
             </h4>
             <div className="mt-3 space-y-2 font-sans text-sm text-charcoal-muted">
-              <a href={`tel:${phone.replace(/\s/g, '')}`} className="flex items-center gap-2 transition-colors hover:text-orange">
-                <Phone size={18} className="shrink-0" />
-                {phone}
-              </a>
               <a href={`mailto:${email}`} className="flex items-center gap-2 transition-colors hover:text-orange">
                 <Mail size={18} className="shrink-0" />
                 {email}

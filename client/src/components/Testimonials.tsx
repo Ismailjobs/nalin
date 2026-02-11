@@ -3,14 +3,15 @@
 import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
-import { testimonials } from '@/data/testimonials';
 import type { Dictionary } from '@/i18n/get-dictionary';
 
 const STAR_COUNT = 5;
 
 export function Testimonials({ dict }: { dict: Dictionary }) {
+  const testimonials = dict.testimonials ?? [];
   const [index, setIndex] = useState(0);
   const total = testimonials.length;
+  const review = total > 0 ? testimonials[index % total] : null;
 
   const goNext = useCallback(() => {
     setIndex((i) => (i + 1) % total);
@@ -24,8 +25,6 @@ export function Testimonials({ dict }: { dict: Dictionary }) {
     const id = setInterval(goNext, 6000);
     return () => clearInterval(id);
   }, [goNext]);
-
-  const review = testimonials[index];
 
   return (
     <section className="relative w-full overflow-hidden border-y border-charcoal/10 bg-cream py-20 md:py-28">
@@ -51,6 +50,7 @@ export function Testimonials({ dict }: { dict: Dictionary }) {
 
         <div className="mt-16 border-2 border-charcoal/15 bg-cream-bright">
           <div className="relative flex min-h-[280px] flex-col items-center justify-center px-8 py-12 md:min-h-[320px] md:px-14 md:py-16">
+            {review ? (
             <AnimatePresence mode="wait" initial={false}>
               <motion.div
                 key={review.id}
@@ -73,8 +73,10 @@ export function Testimonials({ dict }: { dict: Dictionary }) {
                 </footer>
               </motion.div>
             </AnimatePresence>
+            ) : null}
           </div>
 
+          {total > 0 && (
           <div className="flex items-center justify-between border-t border-charcoal/10 px-4 py-4 md:px-6">
             <button
               type="button"
@@ -107,6 +109,7 @@ export function Testimonials({ dict }: { dict: Dictionary }) {
               <ChevronRight className="h-6 w-6" strokeWidth={1.5} />
             </button>
           </div>
+          )}
         </div>
       </div>
     </section>
