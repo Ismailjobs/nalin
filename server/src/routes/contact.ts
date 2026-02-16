@@ -1,10 +1,16 @@
 import { Router, Request, Response } from 'express';
 import sanitizeHtml from 'sanitize-html';
-import { transporter, isEmailConfigured } from '../lib/email.js';
+import { sendContactEmail, sendConfirmationEmail, isEmailConfigured } from '../lib/email.js';
 
 const router = Router();
 
+/** Formdan gelen mailler bu adrese gider (Brevo ile). */
 const RECIPIENT = process.env.CONTACT_EMAIL || 'office@nalin.at';
+
+const MAX_NAME = 120;
+const MAX_EMAIL = 254;
+const MAX_SUBJECT = 200;
+const MAX_MESSAGE = 5000;
 
 export interface ContactBody {
   name: string;
@@ -18,17 +24,25 @@ function sanitize(str: string): string {
   return sanitizeHtml(str, { allowedTags: [], allowedAttributes: {} }).trim();
 }
 
+function isValidEmail(s: string): boolean {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s) && s.length <= MAX_EMAIL;
+}
+
 router.post('/', async (req: Request, res: Response): Promise<void> => {
   const raw = req.body as ContactBody;
 
-  const name = typeof raw.name === 'string' ? sanitize(raw.name) : '';
-  const email = typeof raw.email === 'string' ? sanitize(raw.email) : '';
-  const subject = typeof raw.subject === 'string' ? sanitize(raw.subject) : '';
-  const message = typeof raw.message === 'string' ? sanitize(raw.message) : '';
+  const name = typeof raw.name === 'string' ? sanitize(raw.name).slice(0, MAX_NAME) : '';
+  const email = typeof raw.email === 'string' ? sanitize(raw.email).slice(0, MAX_EMAIL) : '';
+  const subject = typeof raw.subject === 'string' ? sanitize(raw.subject).slice(0, MAX_SUBJECT) : '';
+  const message = typeof raw.message === 'string' ? sanitize(raw.message).slice(0, MAX_MESSAGE) : '';
   const captchaToken = typeof raw.captchaToken === 'string' ? raw.captchaToken : '';
 
   if (!name || !email || !message) {
     res.status(400).json({ success: false, error: 'Name, email and message are required' });
+    return;
+  }
+  if (!isValidEmail(email)) {
+    res.status(400).json({ success: false, error: 'Invalid email address' });
     return;
   }
 
@@ -54,25 +68,32 @@ router.post('/', async (req: Request, res: Response): Promise<void> => {
   }
 
   if (!isEmailConfigured()) {
-    console.warn('Brevo SMTP not configured; skipping email send');
+    console.warn('Brevo API key not configured; skipping email send');
     res.json({ success: true, message: 'Message received (email not sent)' });
     return;
   }
 
+  const emailSubject = subject ? `[Nalin] ${subject}` : `[Nalin] Nachricht von ${name}`;
+  const textContent = `Von: ${name} <${email}>\n\n${message}`;
+  const htmlContent = `
+    <p><strong>Von:</strong> ${sanitizeHtml(name)} &lt;${sanitizeHtml(email)}&gt;</p>
+    ${subject ? `<p><strong>Betreff:</strong> ${sanitizeHtml(subject)}</p>` : ''}
+    <hr />
+    <p>${sanitizeHtml(message).replace(/\n/g, '<br />')}</p>
+  `;
+
   try {
-    await transporter!.sendMail({
-      from: process.env.BREVO_SMTP_FROM || (process.env.BREVO_SMTP_USER ?? 'noreply@nalin.at'),
+    await sendContactEmail({
       to: RECIPIENT,
       replyTo: email,
-      subject: subject ? `[Nalin] ${subject}` : `[Nalin] Nachricht von ${name}`,
-      text: `Von: ${name} <${email}>\n\n${message}`,
-      html: `
-        <p><strong>Von:</strong> ${sanitizeHtml(name)} &lt;${sanitizeHtml(email)}&gt;</p>
-        ${subject ? `<p><strong>Betreff:</strong> ${sanitizeHtml(subject)}</p>` : ''}
-        <hr />
-        <p>${sanitizeHtml(message).replace(/\n/g, '<br />')}</p>
-      `,
+      subject: emailSubject,
+      text: textContent,
+      html: htmlContent,
     });
+    // Formu dolduran kişiye onay maili (hata olsa bile ofise giden mail gitti sayılır)
+    sendConfirmationEmail(email, name).catch((err) =>
+      console.error('Confirmation email error:', err)
+    );
     res.json({ success: true, message: 'Message sent' });
   } catch (err) {
     console.error('Contact email error:', err);

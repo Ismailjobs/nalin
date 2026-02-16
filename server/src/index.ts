@@ -29,6 +29,13 @@ const limiter = rateLimit({
 });
 app.use(limiter);
 
+// İletişim formu: 15 dk'da en fazla 10 gönderim (spam azaltma)
+const contactLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 10,
+  message: { success: false, error: 'Too many contact attempts. Try again later.' },
+});
+app.use('/api/contact', contactLimiter);
 app.use('/api/verify-captcha', verifyCaptchaRouter);
 app.use('/api/contact', contactRouter);
 

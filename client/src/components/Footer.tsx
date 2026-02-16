@@ -8,8 +8,8 @@ import type { Dictionary } from '@/i18n/get-dictionary';
 const address = 'Wilheminenstraße 69, 1160 Wien';
 const email = 'office@nalin.at';
 const social = [
-  { name: 'Facebook', href: 'https://www.facebook.com', icon: Facebook },
-  { name: 'Instagram', href: 'https://www.instagram.com', icon: Instagram },
+  { name: 'Facebook', href: 'https://www.facebook.com/share/1DzGnXy5ub/?mibextid=wwXIfr', icon: Facebook },
+  { name: 'Instagram', href: 'https://www.instagram.com/nalin_and_more', icon: Instagram },
 ];
 
 export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {

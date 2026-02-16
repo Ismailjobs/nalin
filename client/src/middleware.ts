@@ -5,12 +5,9 @@ import { defaultLocale, isValidLocale } from '@/i18n/config';
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // Root: redirect to locale based on Accept-Language (de -> at, else en)
+  // Root: redirect to default locale (/at). Değiştirmek için i18n/config.ts → defaultLocale.
   if (pathname === '/') {
-    const acceptLang = request.headers.get('accept-language') ?? '';
-    const preferDe = acceptLang.toLowerCase().includes('de');
-    const locale = preferDe ? 'at' : 'en';
-    return NextResponse.redirect(new URL(`/${locale}`, request.url));
+    return NextResponse.redirect(new URL(`/${defaultLocale}`, request.url));
   }
 
   // /at or /en (and subpaths): allow

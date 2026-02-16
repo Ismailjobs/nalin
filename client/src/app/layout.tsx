@@ -5,6 +5,19 @@ import { BackToTop } from '@/components/BackToTop';
 export const metadata: Metadata = {
   title: 'Nalin - Keep Up',
   description: 'Nalin – Keep up. Wilheminenstraße 69, 1160 Wien.',
+  keywords: [
+    'Nalin',
+    'Nalin Keep Up',
+    'Döner Wien',
+    'Dürüm Wien',
+    'Restaurant 1160',
+    'Wilhelminenstraße',
+    'Wien',
+    'Burger',
+    'Falafel',
+    'türkische Küche',
+    'Fast Food Wien',
+  ],
   icons: {
     icon: [{ url: '/favicon.png', type: 'image/png', sizes: '32x32' }],
     apple: [{ url: '/favicon.png', type: 'image/png', sizes: '180x180' }],
