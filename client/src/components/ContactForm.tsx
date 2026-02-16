@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import HCaptcha from '@hcaptcha/react-hcaptcha';
 import type { Dictionary } from '@/i18n/get-dictionary';
 
-// Aynı origin: sayfa 80/443'ten geliyorsa form da oraya gider, Nginx /api → 4001 yönlendirir
+// Form /api/contact'a gider; Next.js rewrites bunu Express'e iletir (Docker: server:4000, Dev: localhost:4001)
 const SITEKEY = process.env.NEXT_PUBLIC_HCAPTCHA_SITEKEY || '';
 
 export function ContactForm({ dict }: { dict: Dictionary }) {
@@ -51,7 +51,6 @@ export function ContactForm({ dict }: { dict: Dictionary }) {
           captchaToken: token || '',
         }),
       });
-      // Debug: cevabı önce text al, sonra JSON parse et; sunucu hata mesajı veya status kodu görünsün
       const text = await res.text();
       const json = text ? (() => { try { return JSON.parse(text); } catch { return {}; } })() : {};
 

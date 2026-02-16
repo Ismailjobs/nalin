@@ -5,12 +5,14 @@ const nextConfig = {
   env: {
     NEXT_PUBLIC_HCAPTCHA_SITEKEY: process.env.NEXT_PUBLIC_HCAPTCHA_SITEKEY,
   },
-  // Geliştirme: /api istekleri Express (4001) üzerine proxy
+  // /api isteklerini Express'e yönlendir
+  // Production (Docker): server:4000 (Docker iç ağ), Dev: localhost:4001
   async rewrites() {
-    if (process.env.NODE_ENV === 'development') {
-      return [{ source: '/api/:path*', destination: 'http://127.0.0.1:4001/api/:path*' }];
-    }
-    return [];
+    const apiDest =
+      process.env.NODE_ENV === 'production'
+        ? 'http://server:4000/api/:path*'
+        : 'http://127.0.0.1:4001/api/:path*';
+    return [{ source: '/api/:path*', destination: apiDest }];
   },
 };
 
