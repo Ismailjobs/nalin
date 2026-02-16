@@ -3,7 +3,7 @@ import cors from 'cors';
 import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
 import { connectDb } from './lib/db.js';
-import { contactRouter } from './routes/contact.ts';
+import { contactRouter } from './routes/contact.js';
 import { verifyCaptchaRouter } from './routes/verify-captcha.js';
 import dotenv from 'dotenv';
 dotenv.config();
