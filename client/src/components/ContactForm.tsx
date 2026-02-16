@@ -51,7 +51,9 @@ export function ContactForm({ dict }: { dict: Dictionary }) {
           captchaToken: token || '',
         }),
       });
-      const json = await res.json().catch(() => ({}));
+      // Debug: cevabı önce text al, sonra JSON parse et; sunucu hata mesajı veya status kodu görünsün
+      const text = await res.text();
+      const json = text ? (() => { try { return JSON.parse(text); } catch { return {}; } })() : {};
 
       if (res.ok && json.success) {
         setStatus('success');
@@ -59,7 +61,7 @@ export function ContactForm({ dict }: { dict: Dictionary }) {
         captchaRef.current?.resetCaptcha();
       } else {
         setStatus('error');
-        setErrorMessage(json.error || t.errorSend);
+        setErrorMessage(json.error || (res.status ? `Error ${res.status}` : '') || t.errorSend);
       }
     } catch {
       setStatus('error');

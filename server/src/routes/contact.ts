@@ -96,8 +96,13 @@ router.post('/', async (req: Request, res: Response): Promise<void> => {
     );
     res.json({ success: true, message: 'Message sent' });
   } catch (err) {
-    console.error('Contact email error:', err);
-    res.status(500).json({ success: false, error: 'Failed to send message' });
+    const message = err instanceof Error ? err.message : 'Unknown error';
+    console.error('Contact email error:', message, err);
+    // Brevo 401/400 gibi hatalar message'da; API key veya gönderici adresi kontrolü
+    res.status(500).json({
+      success: false,
+      error: 'Email delivery failed. Please try again or contact us at ' + RECIPIENT,
+    });
   }
 });
 
