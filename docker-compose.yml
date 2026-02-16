@@ -1,12 +1,11 @@
 # Veriler 3001 (client) ve 4001 (API) üzerinden girer/çıkar. Sunucuda .env ile HOST URL'lerini ayarlayın.
-version: "3.8"
-
 services:
   server:
     build:
       context: ./server
       dockerfile: Dockerfile
     container_name: nalin-server
+    # Host 4001 (Nginx proxy_pass), container içinde 4000
     ports:
       - "4001:4000"
     environment:

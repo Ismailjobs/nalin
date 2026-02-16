@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import HCaptcha from '@hcaptcha/react-hcaptcha';
 import type { Dictionary } from '@/i18n/get-dictionary';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || '';
+// Aynı origin: sayfa 80/443'ten geliyorsa form da oraya gider, Nginx /api → 4001 yönlendirir
 const SITEKEY = process.env.NEXT_PUBLIC_HCAPTCHA_SITEKEY || '';
 
 export function ContactForm({ dict }: { dict: Dictionary }) {
@@ -40,7 +40,7 @@ export function ContactForm({ dict }: { dict: Dictionary }) {
     setErrorMessage('');
 
     try {
-      const res = await fetch(`${API_URL}/api/contact`, {
+      const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
