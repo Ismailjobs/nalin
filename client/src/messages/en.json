@@ -12,7 +12,11 @@
     "qualitySlogan": "Quality is no coincidence.",
     "title": "Nalin – Keep up",
     "subtitle": "Wilheminenstraße 69, 1160 Wien",
-    "cta": "View Menu"
+    "cta": "View Menu",
+    "orderOnline": "Order online",
+    "orderOnlineFoodora": "Foodora",
+    "orderOnlineLieferando": "Lieferando",
+    "orderOnlineWolt": "Wolt"
   },
   "home": {
     "beliebt": "Popular",
