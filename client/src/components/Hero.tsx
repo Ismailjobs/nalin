@@ -8,10 +8,11 @@ import { ChevronRight, ChevronDown, ShoppingBag } from 'lucide-react';
 import type { Locale } from '@/i18n/config';
 import type { Dictionary } from '@/i18n/get-dictionary';
 
+// HTTPS linkleri: mobilde uygulama yüklüyse Universal/App Link ile uygulama açılır, yoksa tarayıcıda açılır (hata vermez)
 const ORDER_LINKS = [
   { key: 'orderOnlineFoodora' as const, url: 'https://www.foodora.at/restaurant/baev/nalin-keepup-1160', image: '/foodora.jpg' },
   { key: 'orderOnlineLieferando' as const, url: 'https://www.lieferando.at/speisekarte/nalin-kebap-und-mehr#kategorie_ffbac4ab-145a-490e-a7a9-a6c05fe9e821', image: '/lieferando.jpg' },
-  { key: 'orderOnlineWolt' as const, url: 'https://wolt.com/de-at/aut/vienna/restaurant/nalin-16?no_universal_links=true', image: '/wolt.jpg' },
+  { key: 'orderOnlineWolt' as const, url: 'https://wolt.com/de-at/aut/vienna/restaurant/nalin-16', image: '/wolt.jpg' },
 ] as const;
 
 export function Hero({ dict, locale }: { dict: Dictionary; locale: Locale }) {
