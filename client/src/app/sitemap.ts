@@ -4,7 +4,7 @@ import { getAllMenuSlugs } from '@/data/menu';
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://nalin.at';
 
-const staticPaths = ['', '/menu', '/kontakt', '/impressum', '/partner'];
+const staticPaths = ['', '/menu', '/kontakt', '/impressum'];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];

@@ -69,26 +69,12 @@
     "hoursLine2": "Samstag, Sonntag und Feiertage 12:00 - 22:00",
     "contact": "Kontakt",
     "rights": "Alle Rechte vorbehalten.",
-    "impressum": "Impressum",
-    "partner": "Partner"
+    "impressum": "Impressum"
   },
   "impressum": {
     "title": "Impressum",
     "back": "Zurück",
     "intro": "Angaben gemäß § 5 TMG (Informationspflicht für kommerzielle Anbieter). Bitte ergänzen Sie diese Seite mit den rechtlich erforderlichen Angaben zu Ihrem Unternehmen (Firmenname, Anschrift, Vertretungsberechtigte, Kontakt, ggf. Registergericht, USt-IdNr., etc.)."
-  },
-  "partner": {
-    "title": "Partner",
-    "back": "Zurück",
-    "heading": "Empfehlungen & Nützliche Links",
-    "intro": "Hier teilen wir von Zeit zu Zeit Links zu Webseiten, die wir im Alltag für hilfreich halten oder denen wir vertrauen. Das ist keine Werbung, sondern schlicht das, was wir selbst weiterempfehlen würden.",
-    "links": [
-      {
-        "name": "Sofort Entrümpelung",
-        "url": "https://sofortentrumpelung.at",
-        "text": "Für professionelle und schnelle Räumungen oder Entrümpelungen in Wien und Umgebung empfehlen wir unseren zuverlässigen Partner."
-      }
-    ]
   },
   "testimonials": [
     { "id": "alexandra", "quote": "Super Kebab! Cocktailsauce schmeckt fantastisch, gutes Brot, nette Mitarbeiter, was will man mehr! Sehr gutes Preis/Leistungsverhältnis.", "author": "Alexandra Rinner" },
