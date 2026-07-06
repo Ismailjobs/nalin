@@ -80,12 +80,20 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
             <p className="font-sans text-xs text-charcoal-muted">
               © {new Date().getFullYear()} Nalin Wien. {t.rights}
             </p>
-            <Link
-              href={`${base}/impressum`}
-              className="font-sans text-xs text-charcoal-muted transition-colors hover:text-orange"
-            >
-              {t.impressum}
-            </Link>
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+              <Link
+                href={`${base}/impressum`}
+                className="font-sans text-xs text-charcoal-muted transition-colors hover:text-orange"
+              >
+                {t.impressum}
+              </Link>
+              <Link
+                href={`${base}/partner`}
+                className="font-sans text-xs text-charcoal-muted transition-colors hover:text-orange"
+              >
+                {t.partner}
+              </Link>
+            </div>
           </div>
         </div>
       </div>

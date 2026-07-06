@@ -69,12 +69,26 @@
     "hoursLine2": "Saturday, Sunday and holidays 12:00 - 22:00",
     "contact": "Contact",
     "rights": "All rights reserved.",
-    "impressum": "Imprint"
+    "impressum": "Imprint",
+    "partner": "Partners"
   },
   "impressum": {
     "title": "Imprint",
     "back": "Back",
     "intro": "Information according to § 5 TMG (duty to provide information for commercial providers). Please add the legally required details about your company (company name, address, representatives, contact, register court if applicable, VAT ID, etc.)."
+  },
+  "partner": {
+    "title": "Partners",
+    "back": "Back",
+    "heading": "Recommendations & Useful Links",
+    "intro": "From time to time we share links to websites we find helpful in everyday life or that we trust.",
+    "links": [
+      {
+        "name": "Sofort Entrümpelung",
+        "url": "https://sofortentrumpelung.at",
+        "text": "For professional and fast clear-outs or removals in Vienna and the surrounding area, we recommend our reliable partner."
+      }
+    ]
   },
   "testimonials": [
     { "id": "alexandra", "quote": "Great kebab! The cocktail sauce tastes fantastic, good bread, friendly staff – what more could you want! Great value for money.", "author": "Alexandra Rinner" },
