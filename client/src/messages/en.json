@@ -25,6 +25,12 @@
     "categories": "Categories",
     "viewMenuLabel": "View menu"
   },
+  "homeTip": {
+    "title": "A tip from the neighbourhood",
+    "beforeLink": "Besides good food, a reliable clear-out can help in everyday life. If you need to clear a cellar, flat or office in Vienna and prefer clear processes and fixed prices, we recommend",
+    "linkText": "Entrümpelung Wien",
+    "afterLink": " – straightforward and with fair terms."
+  },
   "menu": {
     "title": "Our Menu",
     "subtitle": "Fresh ingredients, traditional recipes.",

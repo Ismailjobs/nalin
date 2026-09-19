@@ -1,7 +1,8 @@
-import { Hero } from '@/components/Hero';
+﻿import { Hero } from '@/components/Hero';
 import { AwardsSection } from '@/components/AwardsSection';
 import { FeaturedProducts } from '@/components/FeaturedProducts';
 import { Testimonials } from '@/components/Testimonials';
+import { TipSection } from '@/components/TipSection';
 import { getDictionary } from '@/i18n/get-dictionary';
 import { isValidLocale } from '@/i18n/config';
 import { notFound } from 'next/navigation';
@@ -31,6 +32,7 @@ export default async function HomePage({
       <AwardsSection dict={dict} />
       <FeaturedProducts dict={dict} locale={locale} />
       <Testimonials dict={dict} />
+      <TipSection dict={dict} />
     </>
   );
 }

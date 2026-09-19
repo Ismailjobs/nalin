@@ -25,6 +25,12 @@
     "categories": "Kategorien",
     "viewMenuLabel": "Menü ansehen"
   },
+  "homeTip": {
+    "title": "Tipp aus der Nachbarschaft",
+    "beforeLink": "Neben gutem Essen hilft im Alltag manchmal auch eine zuverlässige Entrümpelung. Wer in Wien Keller, Wohnung oder Büro ausräumen möchte und dabei auf klare Abläufe und Fixpreise Wert legt, dem empfehlen wir",
+    "linkText": "Entrümpelung Wien",
+    "afterLink": " – unkompliziert und mit fairen Konditionen."
+  },
   "menu": {
     "title": "Unser Menü",
     "subtitle": "Frische Zutaten, traditionelle Rezepte.",
